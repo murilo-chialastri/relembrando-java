@@ -37,6 +37,28 @@ public class main {
             System.out.println(msg);
         }
     }
+
+    static int somarImpares(int [] numeros) {
+        int res = 0;
+        for (int n:numeros) {
+            if (!ePar(n)) {
+                res += n;
+            }
+        }
+        return res;
+    }
+
+    static int buscar(int[] numeros, int alvo) {
+        int res = -1;
+        if (alvo < numeros.length) {
+            for (int i = 0; i <= alvo ; i++) {
+                res = numeros[i];
+            }
+
+        }
+        return res;
+    }
+
     static void main() {
         int [] numeros = {2, 5, 8, 9, 12};
         System.out.println(ePar(2));
@@ -44,6 +66,8 @@ public class main {
         System.out.println(maior(4,6));
         repetirMsg("ola mundo", 3);
         System.out.println(contarPares(numeros));
+        System.out.println(somarImpares(numeros));
+        System.out.println(buscar(numeros, 23));
 
     }
 }
